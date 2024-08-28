@@ -19,3 +19,32 @@ wsl --set-default-version 2
 dism.exe /online /enable-feature /featurename:Microsoft-Hyper-V-All /all /norestart
 
 #reboot the system
+
+then open kali and set username and password.
+
+#update the kali Linux
+
+sudo apt-get update -y
+
+sudo apt-get upgrade -y
+
+sudo apt-get dist-upgrade -y
+
+#installing kali all tools
+
+sudo apt-get install kali-linux-large
+
+
+#enable RDP 
+
+sudo apt install -y xrdp xfce4 xfce4-goodies
+
+echo xfce4-session > ~/.xsession
+
+sudo systemctl enable xrdp
+
+sudo systemctl start xrdp
+
+sudo systemctl status xrdp
+
+
