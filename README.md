@@ -32,19 +32,26 @@ sudo apt-get dist-upgrade -y
 
 #installing kali all tools
 
+sudo apt-get install kali-defaults
 sudo apt-get install kali-linux-large
+sudo apt-get install --reinstall kali-menu
+sudo apt-get install -y kali-desktop-gnome
 
 
 #enable RDP 
 
-sudo apt install -y xrdp xfce4 xfce4-goodies
+sudo apt install -y xrdp
 
-echo xfce4-session > ~/.xsession
+sudo apt-get install dbus-x11
+
+echo "gnome-session" > ~/.xsession
 
 sudo systemctl enable xrdp
 
-sudo systemctl start xrdp
+sudo /etc/init.d/xrdp start
 
-sudo systemctl status xrdp
+sudo /etc/init.d/xrdp status
+
+
 
 
